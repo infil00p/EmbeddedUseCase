@@ -31,15 +31,7 @@ public class ExampleInstrumentedTest {
     @Rule
     public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule<>(
             MainActivity.class);
-
-
-    @Test
-    public void useAppContext() throws Exception {
-        // Context of the app under test.
-        Context appContext = InstrumentationRegistry.getTargetContext();
-
-        assertEquals("com.phonegap.embeddedusecase", appContext.getPackageName());
-    }
+    
 
     @Test
     public void testWebViewLoad() throws Exception {
@@ -48,8 +40,6 @@ public class ExampleInstrumentedTest {
         final MainActivity testActivity = mActivityRule.getActivity();
         final SystemWebView webView = (SystemWebView) testActivity.findViewById(R.id.WebViewComponent);
         final String[] url = new String[1];
-
-        sleep(10000);
 
         testActivity.runOnUiThread(new Runnable() {
             @Override
