@@ -24,7 +24,7 @@ import org.json.JSONException;
 public class MainActivity extends AppCompatActivity {
 
 
-    private CordovaWebView webInterface;
+    public CordovaWebView webInterface;
     private CordovaInterfaceImpl stupidface = new CordovaInterfaceImpl(this);
 
     private String TAG = "ComponentWrapper";
